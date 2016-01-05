@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.13
+FROM phusion/baseimage:0.9.18
 MAINTAINER Nicolas Pace <nicolas.pace@unixono.com.ar>
 
 # Set correct environment variables.
