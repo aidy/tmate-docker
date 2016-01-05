@@ -16,6 +16,14 @@ RUN apt-get update && \
     apt-get -y install git-core build-essential pkg-config libtool libevent-dev libncurses-dev zlib1g-dev automake libssh-dev cmake ruby && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN git clone https://github.com/msgpack/msgpack-c.git
+
+RUN cd msgpack-c && \
+    cmake . && \
+    make && \
+    make install && \
+    cd ..
+
 RUN git clone https://github.com/aidyfs/tmate-slave.git
 
 RUN cd tmate-slave && \
